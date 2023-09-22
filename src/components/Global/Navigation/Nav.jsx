@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CartIcon from "./CartIcon";
 
-function Nav() {
+function Nav({ cartCount }) {
   return (
     <div className="container">
       <nav
@@ -27,7 +27,7 @@ function Nav() {
             </Link>
           </li>
           <li className="nav-item align-self-center">
-            <CartIcon />
+            <CartIcon cartCount={cartCount} />
           </li>
         </ul>
       </nav>

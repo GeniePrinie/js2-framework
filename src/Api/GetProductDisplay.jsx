@@ -5,8 +5,10 @@ import RatingDisplay from "../components/ProductDisplayComponents/Ratings";
 import PriceDisplay from "../components/Global/Price";
 import AddToCart from "../components/ProductDisplayComponents/AddToCart";
 import AddSubtractProduct from "../components/Global/AddSubtractProduct";
+import { useCart } from "../components/Global/Navigation/CartCount";
 
 function ProductDisplay({ product }) {
+  const { addToCart } = useCart();
   return (
     <div className="row text-secondary">
       <div className="col-md">
@@ -32,7 +34,8 @@ function ProductDisplay({ product }) {
 
           <div className="d-flex align-items-center my-4">
             <AddSubtractProduct />
-            <AddToCart />
+
+            <AddToCart product={product} addToCart={addToCart} />
           </div>
         </div>
 

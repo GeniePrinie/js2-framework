@@ -1,29 +1,37 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import AddToCart from "../../ProductDisplayComponents/AddToCart";
+import { useCart } from "./CartCount";
+import styled from "styled-components";
 
-function CartIcon({ cartCount }) {
+const CartItself = styled.a`
+  position: relative;
+`;
+
+const CartNotification = styled.span`
+  position: absolute;
+  top: -1;
+  right: -1;
+  width: 25px;
+  height: 25px;
+  padding: 1px 5px;
+  border-radius: 15px;
+`;
+function CartIcon() {
+  const { cartCount } = useCart();
+
   return (
     <Link className="nav-link" to="/mycart">
-      <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
-      {cartCount > 0 && <span className="badge bg-primary">{cartCount}</span>}
+      <CartItself>
+        <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+        {cartCount > 0 && (
+          <CartNotification className="icon bg-primary text-light fs-6">
+            {cartCount}
+          </CartNotification>
+        )}
+      </CartItself>
     </Link>
   );
 }
 
-function ShoppingCart() {
-  const [cartCount, setCartCount] = useState(0);
-
-  const addToCart = () => {
-    setCartCount(cartCount + 1);
-  };
-
-  return (
-    <div>
-      <CartIcon cartCount={cartCount} />
-    </div>
-  );
-}
-
-export default ShoppingCart;
+export default CartIcon;
