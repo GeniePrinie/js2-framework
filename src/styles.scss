@@ -1,0 +1,26 @@
+$primary: #ff796c;
+$secondary: #192a51;
+$info: #ffe4e1;
+$dark: #838089;
+$light: #fff;
+
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  margin-bottom: 100px;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffe4e1;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.logo {
+  font-family: "Libre Barcode 128 Text", cursive;
+  font-size: 4rem;
+}
