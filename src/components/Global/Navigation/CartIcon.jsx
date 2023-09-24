@@ -6,15 +6,16 @@ import styled from "styled-components";
 
 const CartItself = styled.a`
   position: relative;
+  padding: 16px;
 `;
 
 const CartNotification = styled.span`
   position: absolute;
-  top: -1;
-  right: -1;
-  width: 25px;
-  height: 25px;
-  padding: 1px 5px;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  padding: 0px 5px;
   border-radius: 15px;
 `;
 function CartIcon() {

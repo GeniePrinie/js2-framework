@@ -4,14 +4,13 @@ import TagDisplay from "../components/ProductDisplayComponents/Tags";
 import RatingDisplay from "../components/ProductDisplayComponents/Ratings";
 import PriceDisplay from "../components/Global/Price";
 import AddToCart from "../components/ProductDisplayComponents/AddToCart";
-import AddSubtractProduct from "../components/Global/AddSubtractProduct";
 import { useCart } from "../components/Global/Navigation/CartCount";
 
 function ProductDisplay({ product }) {
   const { addToCart } = useCart();
   return (
     <div className="row text-secondary">
-      <div className="col-md">
+      <div className="col-md mb-3 m-md-0">
         <img
           src={product.imageUrl}
           alt={product.title}
@@ -24,21 +23,12 @@ function ProductDisplay({ product }) {
           style={{ borderBottom: "1px dashed" }}
         >
           <h1>{product.title}</h1>
-
           <TagDisplay product={product} />
           <RatingDisplay product={product} />
-
           <p className="fs-5">{product.description}</p>
-
           <PriceDisplay product={product} />
-
-          <div className="d-flex align-items-center my-4">
-            <AddSubtractProduct />
-
-            <AddToCart product={product} addToCart={addToCart} />
-          </div>
+          <AddToCart product={product} addToCart={addToCart} />
         </div>
-
         <ReviewDisplay product={product} />
       </div>
     </div>
