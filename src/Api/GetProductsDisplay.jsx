@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PriceDisplay from "../components/Global/Price";
+import PriceDisplay from "../Components/Global/Price";
 
 function ProductsDisplay({ product }) {
   return (

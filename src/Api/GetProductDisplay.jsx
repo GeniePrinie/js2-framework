@@ -1,10 +1,10 @@
 import React from "react";
-import ReviewDisplay from "../components/ProductDisplayComponents/Reviews";
-import TagDisplay from "../components/ProductDisplayComponents/Tags";
-import RatingDisplay from "../components/ProductDisplayComponents/Ratings";
-import PriceDisplay from "../components/Global/Price";
-import AddToCart from "../components/ProductDisplayComponents/AddToCart";
-import { useCart } from "../components/Global/Navigation/CartCount";
+import ReviewDisplay from "../Components/ProductDisplayComponents/Reviews";
+import TagDisplay from "../Components/ProductDisplayComponents/Tags";
+import RatingDisplay from "../Components/ProductDisplayComponents/Ratings";
+import PriceDisplay from "../Components/Global/Price";
+import AddToCart from "../Components/ProductDisplayComponents/AddToCart";
+import { useCart } from "../Components/Global/Navigation/CartCount";
 
 function ProductDisplay({ product }) {
   const { addToCart } = useCart();
