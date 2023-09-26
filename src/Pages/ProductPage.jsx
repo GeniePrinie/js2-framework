@@ -1,9 +1,9 @@
-import GetIndividualProduct from "../Api/GetProduct";
+import GetProduct from "../Api/GetProduct";
 
 function Product() {
   return (
     <div className="container">
-      <GetIndividualProduct />
+      <GetProduct />
     </div>
   );
 }
