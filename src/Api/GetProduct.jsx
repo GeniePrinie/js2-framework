@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ProductDisplay from "./GetProductDisplay";
+import ProductDisplay from "../Components/ProductDisplayComponents/ProductDisplay";
 
-function GetIndividualProduct() {
+function GetProduct() {
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -45,4 +45,4 @@ function GetIndividualProduct() {
   );
 }
 
-export default GetIndividualProduct;
+export default GetProduct;

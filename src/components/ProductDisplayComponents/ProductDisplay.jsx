@@ -1,10 +1,9 @@
 import React from "react";
-import ReviewDisplay from "../Components/ProductDisplayComponents/Reviews";
-import TagDisplay from "../Components/ProductDisplayComponents/Tags";
-import RatingDisplay from "../Components/ProductDisplayComponents/Ratings";
-import PriceDisplay from "../Components/Global/Price";
-import AddToCart from "../Components/ProductDisplayComponents/AddToCart";
-import AddSubtractProduct from "../Components/Global/AddSubtractProduct";
+import ReviewDisplay from "./Reviews";
+import TagDisplay from "./Tags";
+import RatingDisplay from "./Ratings";
+import PriceDisplay from "../Global/Price";
+import AddToCart from "./AddToCart";
 
 function ProductDisplay({ product }) {
   return (
@@ -31,7 +30,6 @@ function ProductDisplay({ product }) {
           <PriceDisplay product={product} />
 
           <div className="d-flex align-items-center my-4">
-            <AddSubtractProduct />
             <AddToCart />
           </div>
         </div>
