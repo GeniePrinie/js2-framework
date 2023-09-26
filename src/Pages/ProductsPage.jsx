@@ -1,6 +1,6 @@
 // import React, { useState } from "react";
 import GetProducts from "../Api/GetProducts";
-import SearchEngine from "../components/ProductsDisplayComponents/Search";
+import SearchEngine from "../Components/ProductsDisplayComponents/Search";
 
 function Home() {
   // const [searchResults, setSearchResults] = useState([]);
