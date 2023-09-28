@@ -1,9 +1,6 @@
-// import React, { useState } from "react";
-import GetProducts from "../Api/GetProducts";
-import SearchEngine from "../Components/ProductsDisplayComponents/Search";
+import SearchDisplay from "../Components/ProductsDisplayComponents/SearchDisplay";
 
 function Home() {
-  // const [searchResults, setSearchResults] = useState([]);
   return (
     <div>
       <div className="container">
@@ -14,8 +11,7 @@ function Home() {
         </p>
       </div>
 
-      <SearchEngine />
-      <GetProducts />
+      <SearchDisplay />
     </div>
   );
 }
