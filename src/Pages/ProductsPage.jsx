@@ -1,6 +1,11 @@
-import SearchDisplay from "../Components/ProductsDisplayComponents/SearchDisplay";
+import { useState } from "react";
+import GetProducts from "../Api/GetProducts";
+import { SearchBar } from "../Components/ProductsDisplayComponents/SearchBar";
+import SearchResultsList from "../Components/ProductsDisplayComponents/SearchResultsList";
 
 function Home() {
+  const [results, setResults] = useState([]);
+
   return (
     <div>
       <div className="container">
@@ -11,7 +16,14 @@ function Home() {
         </p>
       </div>
 
-      <SearchDisplay />
+      <div>
+        <SearchBar setResults={setResults} />
+        {results.length === 0 ? (
+          <GetProducts />
+        ) : (
+          <SearchResultsList results={results} />
+        )}
+      </div>
     </div>
   );
 }
