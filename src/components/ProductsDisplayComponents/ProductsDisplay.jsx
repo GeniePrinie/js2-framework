@@ -6,7 +6,7 @@ function ProductsDisplay({ product }) {
   return (
     <Link
       to={`/product/${product.id}`}
-      className="card-link text-decoration-none col-md-6 col-lg-4 col-xl-3 mb-1"
+      className="card-link text-decoration-none col-md-6 col-lg-4 col-xl-3 mb-4"
     >
       <div
         className="card border-0 shadow-sm"
