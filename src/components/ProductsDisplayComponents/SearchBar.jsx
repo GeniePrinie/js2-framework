@@ -15,7 +15,6 @@ export const SearchBar = ({ setResults }) => {
             product.title.toLowerCase().includes(value)
           );
         });
-        console.log(results);
         setResults(results);
       });
   };
