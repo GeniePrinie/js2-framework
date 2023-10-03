@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./Navigation/Layout";
-import { Home, Products } from "../../Pages/ProductsPage";
-import Contact from "../../Pages/ContactPage";
-import MyCart from "../../Pages/MyCartPage";
-import Product from "../../Pages/ProductPage";
-import PurchaseSuccess from "../../Pages/CheckoutSuccessPage";
+import Layout from "./Components/Global/Navigation/Layout";
+import { Home, Products } from "./Pages/ProductsPage";
+import Contact from "./Pages/ContactPage";
+import MyCart from "./Pages/MyCartPage";
+import Product from "./Pages/ProductPage";
+import PurchaseSuccess from "./Pages/CheckoutSuccessPage";
 
 function RouteNotFound() {
   return <div>Page not found</div>;
