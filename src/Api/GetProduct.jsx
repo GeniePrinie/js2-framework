@@ -36,8 +36,6 @@ function GetProduct() {
     return <div>Error</div>;
   }
 
-  console.log(product);
-
   return (
     <div>
       <ProductDisplay key={product.id} product={product} />
