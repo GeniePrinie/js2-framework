@@ -1,14 +1,36 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
+import styled from "styled-components";
 
 const CartIcon = () => {
   const { totalItems } = useCart();
 
+  const CartItself = styled.a`
+    position: relative;
+    padding: 16px;
+  `;
+
+  const CartNotification = styled.span`
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    padding: 0px 5px;
+    border-radius: 15px;
+  `;
+
   return (
     <Link className="nav-link" to="/mycart">
-      <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
-      {totalItems > 0 && <span className="badge bg-primary">{totalItems}</span>}
+      <CartItself>
+        <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+        {totalItems > 0 && (
+          <CartNotification className="icon bg-primary text-light fs-6">
+            {totalItems}
+          </CartNotification>
+        )}
+      </CartItself>
     </Link>
   );
 };
