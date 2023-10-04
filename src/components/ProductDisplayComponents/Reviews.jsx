@@ -2,6 +2,7 @@ import React from "react";
 
 function ReviewDisplay({ product }) {
   const numberOfReviews = product.reviews ? product.reviews.length : 0;
+  console.log({ product });
   return (
     <div>
       <div className="my-3">
@@ -9,7 +10,7 @@ function ReviewDisplay({ product }) {
       </div>
       <div>
         {product &&
-          product.review &&
+          product.reviews &&
           product.reviews.map((review) => (
             <div
               key={review.id}
