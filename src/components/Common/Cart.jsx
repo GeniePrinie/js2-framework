@@ -1,11 +1,12 @@
 import React from "react";
 import { useCart } from "react-use-cart";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const Cart = () => {
   const {
     isEmpty,
     totalItems,
-    totalUniqueItems,
     items,
     cartTotal,
     updateItemQuantity,
@@ -16,12 +17,27 @@ export const Cart = () => {
   if (isEmpty) return <div>Your Cart is empty</div>;
   return (
     <section className="py-4 container">
-      <div className="row justify-content-center">
+      <div className="row text-secondary">
+        <h1>My Cart</h1>
         <div className="col-12">
-          <h5>
-            Cart({totalUniqueItems}) Total Items ({totalItems})
-          </h5>
-          <table className="table table-light table-hover m-0">
+          <table className="table table-primary table-borderless table-hover my-5">
+            <thead>
+              <tr>
+                <th className="text-light bg-primary fs-5" scope="col">
+                  Item
+                </th>
+                <th className="bg-primary" scope="col"></th>
+                <th className="text-light bg-primary fs-5" scope="col">
+                  Unit Price
+                </th>
+                <th className="text-light bg-primary fs-5" scope="col">
+                  Quantity
+                </th>
+                <th className="text-light bg-primary fs-5" scope="col">
+                  Remove
+                </th>
+              </tr>
+            </thead>
             <tbody>
               {items.map((item, index) => {
                 return (
@@ -30,50 +46,68 @@ export const Cart = () => {
                       <img
                         src={item.imageUrl}
                         alt={item.title}
-                        style={{ height: "6rem" }}
+                        style={{ maxWidth: "100px" }}
                       />
                     </td>
-                    <td>{item.title}</td>
-                    <td>{item.discountedPrice}</td>
-                    <td>Quantity ({item.quantity})</td>
-                    <td>
-                      <button
-                        className="btn btn-info ms-2"
+                    <td className="text-secondary fs-5">
+                      <Link
+                        to={`/product/${item.id}`}
+                        className="text-decoration-none text-secondary"
+                      >
+                        {item.title}
+                      </Link>
+                    </td>
+                    <td className="text-secondary fs-5">
+                      {item.discountedPrice}
+                    </td>
+                    <td className="text-secondary fs-5">
+                      <FontAwesomeIcon
+                        className="me-3 minus text-secondary"
                         onClick={() =>
                           updateItemQuantity(item.id, item.quantity - 1)
                         }
-                      >
-                        -
-                      </button>
-                      <button
-                        className="btn btn-info ms-2"
+                        icon="fa-solid fa-circle-minus"
+                      />
+                      {item.quantity}
+                      <FontAwesomeIcon
+                        className="ms-3 plus text-secondary"
                         onClick={() =>
                           updateItemQuantity(item.id, item.quantity + 1)
                         }
-                      >
-                        +
-                      </button>
-                      <button
-                        className="btn btn-danger ms-2"
+                        icon="fa-solid fa-circle-plus"
+                      />
+                    </td>
+                    <td>
+                      <FontAwesomeIcon
+                        className="ms-3 fs-4 text-primary trashcan"
+                        icon="fa-solid fa-trash-can"
                         onClick={() => removeItem(item.id)}
-                      >
-                        Remove Item
-                      </button>
+                      />
                     </td>
                   </tr>
                 );
               })}
             </tbody>
           </table>
+          <div className="mb-2 fs-4">Total Items: {totalItems}</div>
         </div>
-        <div className="col-auto ms-auto">
-          <h2>Total Price: Kr {cartTotal}</h2>
+        <div
+          className="container border-secondary mb-5"
+          style={{ borderTop: "1px dashed" }}
+        ></div>
+        <div className="col-auto ms-auto ">
+          <h2>Total: </h2>
         </div>
-        <div className="col-auto ">
-          <button className="btn btn-danger m-2" onClick={() => emptyCart()}>
-            Clear Cart
-          </button>
-          <button className="btn btn-primary m-2">Pay Now</button>
+        <div className="col-auto fs-3">Kr {cartTotal}</div>
+        <div>
+          <Link to={`/purchasesuccess`}>
+            <button
+              className="btn btn-primary text-light m-2"
+              onClick={() => emptyCart()}
+            >
+              Pay Now
+            </button>
+          </Link>
         </div>
       </div>
     </section>
