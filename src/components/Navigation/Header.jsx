@@ -1,5 +1,17 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { CartIcon } from "../Cart/CartIcon";
+import { useCart } from "react-use-cart";
+
+const CartIcon = () => {
+  const { totalItems } = useCart();
+
+  return (
+    <Link className="nav-link" to="/mycart">
+      <FontAwesomeIcon icon="fa-solid fa-cart-shopping" />
+      {totalItems > 0 && <span className="badge bg-primary">{totalItems}</span>}
+    </Link>
+  );
+};
 
 export const Header = () => {
   return (

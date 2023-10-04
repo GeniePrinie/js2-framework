@@ -1,11 +1,14 @@
 import "./App.css";
 import React from "react";
 import { RouterPathway } from "./Router";
+import { CartProvider } from "react-use-cart";
 
 function App() {
   return (
     <div>
-      <RouterPathway />
+      <CartProvider>
+        <RouterPathway />
+      </CartProvider>
     </div>
   );
 }
