@@ -3,9 +3,11 @@ import { Tag } from "./Tag";
 import { Rating } from "./Rating";
 import { Price } from "./Price";
 import { Review } from "./Review";
-import { AddToCart } from "../Cart/AddToCart";
+import { useCart } from "react-use-cart";
 
 export const Product = ({ data }) => {
+  const { addItem } = useCart();
+
   return (
     <div className="row text-secondary">
       <div className="col-md">
@@ -26,7 +28,9 @@ export const Product = ({ data }) => {
           <Price product={data} />
 
           <div className="d-flex align-items-center my-4">
-            <AddToCart />
+            <button className="btn btn-primary" onClick={() => addItem(data)}>
+              Add to Cart
+            </button>
           </div>
         </div>
 
