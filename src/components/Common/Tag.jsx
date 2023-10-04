@@ -1,6 +1,6 @@
 import React from "react";
 
-function TagDisplay({ product }) {
+export function Tag({ product }) {
   return (
     <p className="fs-5">
       {product &&
@@ -13,5 +13,3 @@ function TagDisplay({ product }) {
     </p>
   );
 }
-
-export default TagDisplay;

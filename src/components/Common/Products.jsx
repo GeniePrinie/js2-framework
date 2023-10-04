@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PriceDisplay from "./Global/Price";
+import { Price } from "./Price";
 
 export const Products = ({ data }) => {
   return (
@@ -28,7 +28,7 @@ export const Products = ({ data }) => {
                   {product.description}
                 </p>
 
-                <PriceDisplay product={product} />
+                <Price product={product} />
               </div>
             </div>
           </Link>

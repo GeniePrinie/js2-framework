@@ -1,6 +1,6 @@
 import React from "react";
 
-function AddToCart({ addToCart }) {
+export function AddToCart({ addToCart }) {
   return (
     <button
       className="btn btn-primary text-light px-5"
@@ -11,5 +11,3 @@ function AddToCart({ addToCart }) {
     </button>
   );
 }
-
-export default AddToCart;

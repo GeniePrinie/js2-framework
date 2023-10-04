@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import AddToCart from "../../ProductDisplayComponents/AddToCart";
+import { AddToCart } from "./AddToCart";
 
 function CartIcon({ cartCount }) {
   return (
@@ -15,7 +15,7 @@ function CartIcon({ cartCount }) {
 function ShoppingCart() {
   const [cartCount, setCartCount] = useState(0);
 
-  const addToCart = () => {
+  const AddToCart = () => {
     setCartCount(cartCount + 1);
   };
 

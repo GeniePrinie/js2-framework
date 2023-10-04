@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Product } from "../Components/Product";
+import { Product } from "../Components/Common/Product";
 
-function ProductPage() {
+export function ProductPage() {
   const [product, setProduct] = useState([]);
   let { id } = useParams();
   const url = `https://api.noroff.dev/api/v1/online-shop/${id}`;
@@ -26,5 +26,3 @@ function ProductPage() {
     </div>
   );
 }
-
-export default ProductPage;

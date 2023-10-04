@@ -1,6 +1,6 @@
 import React from "react";
 
-function PriceDisplay({ product }) {
+export function Price({ product }) {
   const hasDiscount =
     product.discountedPrice !== null && product.discountedPrice !== undefined;
   const samePrice = hasDiscount && product.discountedPrice === product.price;
@@ -24,5 +24,3 @@ function PriceDisplay({ product }) {
     </div>
   );
 }
-
-export default PriceDisplay;
