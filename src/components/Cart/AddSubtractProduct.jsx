@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-function AddSubtractProduct() {
+export const AddSubtractProduct = () => {
   return (
     <div className="d-flex align-items-center">
       <div>
@@ -13,6 +13,4 @@ function AddSubtractProduct() {
       </div>
     </div>
   );
-}
-
-export default AddSubtractProduct;
+};

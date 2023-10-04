@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Tag({ product }) {
+export const Tag = ({ product }) => {
   return (
     <p className="fs-5">
       {product &&
@@ -12,4 +12,4 @@ export function Tag({ product }) {
         ))}
     </p>
   );
-}
+};

@@ -4,13 +4,13 @@ import { HomePage } from "./Pages/HomePage";
 import { ContactPage } from "./Pages/ContactPage";
 import { CartPage } from "./Pages/CartPage";
 import { ProductPage } from "./Pages/ProductPage";
-import { PurchaseSuccessPage } from "./Pages/CheckoutSuccessPage";
+import { PurchaseSuccessPage } from "./Pages/PurchaseSuccessPage";
 
 function RouteNotFound() {
   return <div>Page not found</div>;
 }
 
-function RouterPathway() {
+export function RouterPathway() {
   return (
     <Router>
       <div>
@@ -28,5 +28,3 @@ function RouterPathway() {
     </Router>
   );
 }
-
-export default RouterPathway;

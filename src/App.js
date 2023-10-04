@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import RouterPathway from "./Router";
+import { RouterPathway } from "./Router";
 
 function App() {
   return (

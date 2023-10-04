@@ -11,7 +11,7 @@ export function ContactPage() {
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
 
-  function validateForm() {
+  const validateForm = () => {
     let isValid = true;
 
     if (fullName.length < 3) {
@@ -44,9 +44,9 @@ export function ContactPage() {
     }
 
     return isValid;
-  }
+  };
 
-  function onFormSubmit(e) {
+  const onFormSubmit = (e) => {
     e.preventDefault();
 
     if (validateForm()) {
@@ -65,7 +65,7 @@ export function ContactPage() {
     } else {
       console.log("Invalid Form Data");
     }
-  }
+  };
 
   return (
     <div className="container">
