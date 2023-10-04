@@ -1,6 +1,6 @@
 import React from "react";
 
-function RatingDisplay({ product }) {
+export function Rating({ product }) {
   const rating =
     product.rating !== null && product.rating !== undefined
       ? product.rating
@@ -12,5 +12,3 @@ function RatingDisplay({ product }) {
     </p>
   );
 }
-
-export default RatingDisplay;

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function PurchaseSuccess() {
+export function PurchaseSuccessPage() {
   return (
     <div className="container ">
       <div className=" text-secondary fs-1 mb-5 text-center">
@@ -14,5 +14,3 @@ function PurchaseSuccess() {
     </div>
   );
 }
-
-export default PurchaseSuccess;

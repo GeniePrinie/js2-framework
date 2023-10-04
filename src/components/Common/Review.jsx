@@ -1,6 +1,6 @@
 import React from "react";
 
-function ReviewDisplay({ product }) {
+export function Review({ product }) {
   const numberOfReviews = product.reviews ? product.reviews.length : 0;
   console.log({ product });
   return (
@@ -27,5 +27,3 @@ function ReviewDisplay({ product }) {
     </div>
   );
 }
-
-export default ReviewDisplay;

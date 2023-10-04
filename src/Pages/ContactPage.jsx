@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Contact() {
+export function ContactPage() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -154,5 +154,3 @@ function Contact() {
     </div>
   );
 }
-
-export default Contact;

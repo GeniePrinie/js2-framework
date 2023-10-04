@@ -1,9 +1,9 @@
 import React from "react";
-import PriceDisplay from "./Global/Price";
-import AddToCart from "./ProductDisplayComponents/AddToCart";
-import RatingDisplay from "./ProductDisplayComponents/Ratings";
-import ReviewDisplay from "./ProductDisplayComponents/Reviews";
-import TagDisplay from "./ProductDisplayComponents/Tags";
+import { Tag } from "./Tag";
+import { Rating } from "./Rating";
+import { Price } from "./Price";
+import { Review } from "./Review";
+import { AddToCart } from "../Cart/AddToCart";
 
 export const Product = ({ data }) => {
   return (
@@ -18,19 +18,19 @@ export const Product = ({ data }) => {
         >
           <h1>{data.title}</h1>
 
-          <TagDisplay product={data} />
-          <RatingDisplay product={data} />
+          <Tag product={data} />
+          <Rating product={data} />
 
           <p className="fs-5">{data.description}</p>
 
-          <PriceDisplay product={data} />
+          <Price product={data} />
 
           <div className="d-flex align-items-center my-4">
             <AddToCart />
           </div>
         </div>
 
-        <ReviewDisplay product={data} />
+        <Review product={data} />
       </div>
     </div>
   );
