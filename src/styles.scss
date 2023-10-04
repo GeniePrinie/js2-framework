@@ -24,3 +24,9 @@ footer {
   font-family: "Libre Barcode 128 Text", cursive;
   font-size: 4rem;
 }
+
+.trashcan,
+.minus,
+.plus {
+  cursor: pointer;
+}
