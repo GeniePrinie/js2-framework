@@ -1,6 +1,6 @@
 import React from "react";
 
-export function AddToCart({ addToCart }) {
+export const AddToCart = ({ addToCart }) => {
   return (
     <button
       className="btn btn-primary text-light px-5"
@@ -10,4 +10,4 @@ export function AddToCart({ addToCart }) {
       Add to Cart
     </button>
   );
-}
+};

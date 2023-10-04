@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Price({ product }) {
+export const Price = ({ product }) => {
   const hasDiscount =
     product.discountedPrice !== null && product.discountedPrice !== undefined;
   const samePrice = hasDiscount && product.discountedPrice === product.price;
@@ -23,4 +23,4 @@ export function Price({ product }) {
       )}
     </div>
   );
-}
+};

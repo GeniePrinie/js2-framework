@@ -1,7 +1,7 @@
 import React from "react";
 import ProductsDisplay from "./ProductsDisplay";
 
-const SearchResultsList = ({ results }) => {
+export const SearchResultsList = ({ results }) => {
   return (
     <div className="container">
       <div className="row">
@@ -12,5 +12,3 @@ const SearchResultsList = ({ results }) => {
     </div>
   );
 };
-
-export default SearchResultsList;

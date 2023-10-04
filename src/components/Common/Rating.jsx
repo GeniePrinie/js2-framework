@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Rating({ product }) {
+export const Rating = ({ product }) => {
   const rating =
     product.rating !== null && product.rating !== undefined
       ? product.rating
@@ -11,4 +11,4 @@ export function Rating({ product }) {
       Rating: {rating} ({numberOfReviews})
     </p>
   );
-}
+};
