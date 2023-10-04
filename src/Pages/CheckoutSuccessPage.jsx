@@ -1,10 +1,16 @@
-import { Button } from "bootstrap";
+import { Link } from "react-router-dom";
 
 function PurchaseSuccess() {
   return (
-    <div className="container text-secondary">
-      Thank you for your purchase!
-      <Button>Back to the store</Button>
+    <div className="container ">
+      <div className=" text-secondary fs-1 mb-5 text-center">
+        Thank you for your purchase!
+      </div>
+      <Link to={`/`}>
+        <button className="btn btn-primary text-light px-5 mt-5" type="button">
+          Back to the store
+        </button>
+      </Link>
     </div>
   );
 }
