@@ -12,6 +12,7 @@ export const Cart = () => {
     removeItem,
     emptyCart,
   } = useCart();
+
   if (isEmpty) return <div>Your Cart is empty</div>;
   return (
     <section className="py-4 container">
@@ -27,13 +28,13 @@ export const Cart = () => {
                   <tr key={index}>
                     <td>
                       <img
-                        src={item.img}
+                        src={item.imageUrl}
                         alt={item.title}
                         style={{ height: "6rem" }}
                       />
                     </td>
                     <td>{item.title}</td>
-                    <td>{item.price}</td>
+                    <td>{item.discountedPrice}</td>
                     <td>Quantity ({item.quantity})</td>
                     <td>
                       <button

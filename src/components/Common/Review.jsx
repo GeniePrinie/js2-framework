@@ -2,7 +2,7 @@ import React from "react";
 
 export const Review = ({ product }) => {
   const numberOfReviews = product.reviews ? product.reviews.length : 0;
-  console.log({ product });
+
   return (
     <div>
       <div className="my-3">
