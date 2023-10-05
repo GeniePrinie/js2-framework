@@ -14,7 +14,8 @@ export const Cart = () => {
     emptyCart,
   } = useCart();
 
-  if (isEmpty) return <div>Your Cart is empty</div>;
+  if (isEmpty)
+    return <div className="text-secondary fs-4">Your Cart is empty!</div>;
   return (
     <section className="py-4 container">
       <div className="row text-secondary">
@@ -98,7 +99,7 @@ export const Cart = () => {
         <div className="col-auto ms-auto ">
           <h2>Total: </h2>
         </div>
-        <div className="col-auto fs-3">Kr {cartTotal}</div>
+        <div className="col-auto fs-3">Kr {cartTotal.toFixed(2)}</div>
         <div>
           <Link to={`/purchasesuccess`}>
             <button
