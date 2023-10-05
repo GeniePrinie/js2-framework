@@ -15,8 +15,8 @@ const CartIcon = () => {
     position: absolute;
     top: 0;
     right: 0;
-    width: 22px;
-    height: 22px;
+    width: 23px;
+    height: 23px;
     padding: 0px 5px;
     border-radius: 15px;
   `;
