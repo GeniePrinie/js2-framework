@@ -21,7 +21,7 @@ export const Cart = () => {
       <div className="row text-secondary">
         <h1>My Cart</h1>
         <div className="col-12">
-          <table className="table table-primary table-borderless table-hover my-5">
+          <table className="table table-primary table-borderless my-5">
             <thead>
               <tr>
                 <th className="text-light bg-primary fs-5" scope="col">
@@ -53,7 +53,7 @@ export const Cart = () => {
                     <td className="text-secondary fs-5">
                       <Link
                         to={`/product/${item.id}`}
-                        className="text-decoration-none text-secondary"
+                        className="text-decoration-none text-secondary link-hover"
                       >
                         {item.title}
                       </Link>
@@ -80,7 +80,7 @@ export const Cart = () => {
                     </td>
                     <td>
                       <FontAwesomeIcon
-                        className="ms-3 fs-4 text-primary trashcan"
+                        className="ms-3 fs-4 text-secondary trashcan"
                         icon="fa-solid fa-trash-can"
                         onClick={() => removeItem(item.id)}
                       />

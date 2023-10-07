@@ -29,4 +29,13 @@ footer {
 .minus,
 .plus {
   cursor: pointer;
+
+  &:hover {
+    color: $primary !important;
+  }
+}
+
+.link-hover:hover {
+  text-decoration: underline !important;
+  color: $primary !important;
 }
