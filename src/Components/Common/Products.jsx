@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { DiscountSquare } from "./DiscountSquare";
 import { Price } from "./Price";
 
 export const Products = ({ data }) => {
@@ -22,6 +23,16 @@ export const Products = ({ data }) => {
                 alt={product.title}
                 style={{ width: "100%", height: "300px", objectFit: "cover" }}
               />
+              {product.discountedPrice && (
+                <DiscountSquare
+                  discountPercentage={
+                    ((product.price - product.discountedPrice) /
+                      product.price) *
+                    100
+                  }
+                />
+              )}
+
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title text-secondary">{product.title}</h5>
                 <p className="card-text text-secondary">

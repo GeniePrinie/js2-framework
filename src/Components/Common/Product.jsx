@@ -4,14 +4,23 @@ import { Rating } from "./Rating";
 import { Price } from "./Price";
 import { Review } from "./Review";
 import { useCart } from "react-use-cart";
+import { DiscountSquare } from "./DiscountSquare";
 
 export const Product = ({ data }) => {
   const { addItem } = useCart();
 
   return (
     <div className="row text-secondary">
-      <div className="col-md">
+      <div className="col-md position-relative">
+        {" "}
         <img src={data.imageUrl} alt={data.title} style={{ width: "100%" }} />
+        {data.discountedPrice && (
+          <DiscountSquare
+            discountPercentage={
+              ((data.price - data.discountedPrice) / data.price) * 100
+            }
+          />
+        )}
       </div>
       <div className="col-md ">
         <div
