@@ -11,7 +11,6 @@ export const Cart = () => {
     cartTotal,
     updateItemQuantity,
     removeItem,
-    emptyCart,
   } = useCart();
 
   if (isEmpty)
@@ -104,7 +103,7 @@ export const Cart = () => {
           <Link to={`/purchasesuccess`}>
             <button
               className="btn btn-primary text-light m-2"
-              onClick={() => emptyCart()}
+              // onClick={() => emptyCart()}
             >
               Pay Now
             </button>
