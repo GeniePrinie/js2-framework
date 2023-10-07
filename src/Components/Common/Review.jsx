@@ -14,7 +14,7 @@ export const Review = ({ product }) => {
           product.reviews.map((review) => (
             <div
               key={review.id}
-              className="card bg-info border-0 shadow p-3 text-secondary mb-3"
+              className="card bg-info border-0 shadow p-3 text-secondary mb-3 bg-light"
             >
               <h3 className="fs-5">Rating: {review.rating}</h3>
               <p>{review.description}</p>
