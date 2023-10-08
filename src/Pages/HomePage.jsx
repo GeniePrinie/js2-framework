@@ -14,6 +14,17 @@ export function HomePage() {
         const response = await fetch(url);
         const json = await response.json();
         setProducts(json);
+
+        document.title = "The Boutique | Home";
+        const metaDescriptionTag = document.querySelector(
+          'meta[name="description"]'
+        );
+        if (metaDescriptionTag) {
+          metaDescriptionTag.setAttribute(
+            "content",
+            "Welcome to The Boutique! Explore our products."
+          );
+        }
       } catch (error) {
         console.log({ error });
       }
