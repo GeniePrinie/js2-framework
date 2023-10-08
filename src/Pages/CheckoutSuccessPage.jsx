@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   loadFromLocalStorage,
@@ -7,6 +8,19 @@ import {
 export function CheckoutSuccessPage() {
   const productItems = loadFromLocalStorage("productItems");
   const productTotalPrice = loadFromLocalStorage("productTotalPrice");
+
+  useEffect(() => {
+    document.title = "The Boutique | Checkout Success";
+    const metaDescriptionTag = document.querySelector(
+      'meta[name="description"]'
+    );
+    if (metaDescriptionTag) {
+      metaDescriptionTag.setAttribute(
+        "content",
+        "Thank you for your purchase at The Boutique. View your order summary here."
+      );
+    }
+  }, []);
 
   return (
     <div className="container ">

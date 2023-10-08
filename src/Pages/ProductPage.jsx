@@ -13,6 +13,14 @@ export function ProductPage() {
         const response = await fetch(url);
         const json = await response.json();
         setProduct(json);
+
+        document.title = `The Boutique | ${json.title}`;
+        const metaDescriptionTag = document.querySelector(
+          'meta[name="description"]'
+        );
+        if (metaDescriptionTag) {
+          metaDescriptionTag.setAttribute("content", json.description);
+        }
       } catch (error) {
         console.log({ error });
       }
