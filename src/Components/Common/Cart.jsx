@@ -2,6 +2,7 @@ import React from "react";
 import { useCart } from "react-use-cart";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { saveToLocalStorage } from "../../Utility/localStorage";
 
 export const Cart = () => {
   const {
@@ -9,6 +10,7 @@ export const Cart = () => {
     totalItems,
     items,
     cartTotal,
+    emptyCart,
     updateItemQuantity,
     removeItem,
   } = useCart();
@@ -103,7 +105,11 @@ export const Cart = () => {
           <Link to={`/purchasesuccess`}>
             <button
               className="btn btn-primary text-light m-2"
-              // onClick={() => emptyCart()}
+              onClick={() => {
+                saveToLocalStorage("productItems", items);
+                saveToLocalStorage("productTotalPrice", cartTotal);
+                emptyCart();
+              }}
             >
               Pay Now
             </button>
