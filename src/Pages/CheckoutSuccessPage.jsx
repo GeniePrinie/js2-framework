@@ -15,11 +15,11 @@ export function CheckoutSuccessPage() {
       </div>
       <div>
         <div className="text-secondary fs-4 mb-5">Your Order Summary</div>
-        <div className="container">
+        <div className="container text-secondary card shadow bg-light py-5 border-0">
           {productItems &&
             productItems.map((item, index) => {
               return (
-                <div key={index} className="row">
+                <div key={index} className="row pb-3">
                   <img
                     className="col"
                     src={item.imageUrl}
@@ -28,7 +28,14 @@ export function CheckoutSuccessPage() {
                   />
                   <div className="text-secondary fs-5 col">{item.title}</div>
                   <div className="text-secondary fs-5 col">
-                    Kr {item.discountedPrice}
+                    Quantity: {item.quantity}
+                  </div>
+
+                  <div className="text-secondary fs-5 col">
+                    Unit price: {item.discountedPrice}
+                  </div>
+                  <div className="text-secondary fs-5 col">
+                    Subtotal: Kr {item.itemTotal}
                   </div>
                 </div>
               );
