@@ -1,3 +1,53 @@
+# The Boutique, an eCom store by Prinyapon Prinyanut
+![Screenshot 2023-10-09 at 5 44 02 PM](https://github.com/GeniePrinie/js2-framework/assets/100139381/d9d26bfb-31b1-4dab-be41-d48221262c7d)
+![Screenshot 2023-10-09 at 5 44 59 PM](https://github.com/GeniePrinie/js2-framework/assets/100139381/8900b255-6ab1-4cb7-a05d-c203485005f3)
+
+## Description
+
+The project was to create a responsive online store by using React.
+
+## Features
+1. Display a list of products.
+2. Display discounted price and discount percentage on products that has discount.
+3. Search functionality to filter products based on user input.
+4. Responsive design for various screen sizes.
+5. Fetch product data from a provided REST API.
+6. Set, get, clear item in LocalStorage.
+7. Contact form validation.
+8. Use React Router to switch between pages.
+9. Contains header and footer by using <Layout> component.
+10. Using Cart icon as a link to the Checkout Page (Shopping cart).
+
+## Pages
+
+1. Home Page
+2. Individual Product Page
+3. Checkout Page (Shopping cart)
+4. Contact Page
+5. Checkout Success Page
+   
+### Home page
+This page has a list of products from Noroff API (which can be clicked to view in an individual post page), a robust search bar.
+
+### Individual Product Page
+This page shows an individual product that was clicked to view from the Home page. The shopper can read the reviews and click "Add to Cart", the particular product will be added as an item in the shopping cart in the checkout page.
+
+### Checkout Page (Shopping cart)
+This page shows all the items that the shopper has added into the shopping cart. The shopper can view the product by clicking the link of the item, add, subtract the quantity of the item and/or remove the item. Once the shopper is satisfied with they item in the cart, the shopper can click "Pay Now" which will direct the shopper to the Checkout success page.
+
+### Checkout Success Page
+This page displays a message to the shopper notifying them that their order was successful and shows the order summary of what the shopper has bought and a button to go back to the Home page. This button also clear the LocalStorage.
+
+### Contact Page
+This page show a contact form that can validate what the shopper types in. The information that is typed in will be shown in the console.
+
+#### Validation requirement
+1. Full name (Minimum number of characters is 3, required)
+2. Subject (Minimum number of characters is 3, required)
+3. Email (Must be a valid email address, required)
+4. Body (Minimum number of characters is 3, required)
+5. Submit button
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +118,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Contact
+
+[My Linkedin page](https://www.linkedin.com/in/genie-prinyanut-ab3441257/)
+
+[My Website](https://genieprinyanut.netlify.app/)
