@@ -3,9 +3,17 @@ import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 import styled from "styled-components";
 
+/**
+ * CartIcon component displays a shopping cart icon with a notification badge indicating the total number of items in the cart.
+ * It utilizes FontAwesome for the cart icon and styled-components for styling.
+ * @component
+ * @returns {JSX.Element} The CartIcon component.
+ */
 const CartIcon = () => {
+  // Get the total number of items in the cart using the `useCart` hook.
   const { totalItems } = useCart();
 
+  // Styled-components for custom styling
   const CartItself = styled.a`
     position: relative;
     padding: 16px;
@@ -35,6 +43,11 @@ const CartIcon = () => {
   );
 };
 
+/**
+ * Header component serves as the site's header, displaying the logo, navigation links, and the shopping cart icon.
+ * @component
+ * @returns {JSX.Element} The Header component.
+ */
 export const Header = () => {
   return (
     <header>

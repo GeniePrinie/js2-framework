@@ -6,10 +6,20 @@ import { CheckoutPage } from "./Pages/CheckoutPage";
 import { ProductPage } from "./Pages/ProductPage";
 import { CheckoutSuccessPage } from "./Pages/CheckoutSuccessPage";
 
+/**
+ * RouteNotFound component displays a "Page not found" message when no matching route is found.
+ * @component
+ * @returns {JSX.Element} The RouteNotFound component.
+ */
 function RouteNotFound() {
   return <div>Page not found</div>;
 }
 
+/**
+ * RouterPathway component configures the routing for the application using React Router.
+ * @component
+ * @returns {JSX.Element} The RouterPathway component.
+ */
 export function RouterPathway() {
   return (
     <Router>

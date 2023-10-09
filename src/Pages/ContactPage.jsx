@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 import { Contact } from "../Components/Common/Contact";
 
+/**
+ * ContactPage component serves as the page for contacting The Boutique.
+ * It sets the document title and meta description for SEO purposes.
+ * @component
+ * @returns {JSX.Element} The ContactPage component.
+ */
 export function ContactPage() {
   useEffect(() => {
     document.title = "The Boutique | Contact Us";

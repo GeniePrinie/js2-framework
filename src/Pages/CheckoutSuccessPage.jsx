@@ -5,8 +5,25 @@ import {
   removeFromLocalStorage,
 } from "../Utility/localStorage";
 
+/**
+ * CheckoutSuccessPage component serves as the confirmation page after a successful purchase.
+ * It displays an order summary and allows the user to return to the store.
+ * It also sets the document title and meta description for SEO purposes.
+ * @component
+ * @returns {JSX.Element} The CheckoutSuccessPage component.
+ */
 export function CheckoutSuccessPage() {
+  
+  /**
+   * `productItems` is an array that stores the purchased items retrieved from local storage.
+   * @type {Array} An array containing purchased product items.
+   */
   const productItems = loadFromLocalStorage("productItems");
+
+  /**
+   * `productTotalPrice` is a number that stores the total price of the purchased items retrieved from local storage.
+   * @type {number} The total price of purchased items.
+   */
   const productTotalPrice = loadFromLocalStorage("productTotalPrice");
 
   useEffect(() => {

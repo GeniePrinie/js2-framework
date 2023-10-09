@@ -6,6 +6,14 @@ import { Review } from "./Review";
 import { useCart } from "react-use-cart";
 import { DiscountSquare } from "./DiscountSquare";
 
+/**
+ * Product component displays detailed information about a product, including its image,
+ * title, tags, rating, description, price, and the option to add it to the cart.
+ * If a discount is available, it shows a discount overlay on the product image.
+ * @component
+ * @param {Object} data - The product data object containing information to be displayed.
+ * @returns {JSX.Element} The Product component.
+ */
 export const Product = ({ data }) => {
   const { addItem } = useCart();
 
