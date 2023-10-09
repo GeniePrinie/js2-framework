@@ -15,7 +15,7 @@ The project was to create a responsive online store by using React.
 6. Set, get, clear item in LocalStorage.
 7. Contact form validation.
 8. Use React Router to switch between pages.
-9. Contains header and footer by using <Layout> component.
+9. Contains header and footer by using < Layout > component.
 10. Using Cart icon as a link to the Checkout Page (Shopping cart).
 
 ## Pages
@@ -27,19 +27,19 @@ The project was to create a responsive online store by using React.
 5. Checkout Success Page
    
 ### Home page
-This page has a list of products from Noroff API (which can be clicked to view in an individual post page), a robust search bar.
+This page has a list of products from Noroff API (which can be clicked to view in an individual post page) and a robust search bar that filters products when typing in a product name.
 
 ### Individual Product Page
 This page shows an individual product that was clicked to view from the Home page. The shopper can read the reviews and click "Add to Cart", the particular product will be added as an item in the shopping cart in the checkout page.
 
 ### Checkout Page (Shopping cart)
-This page shows all the items that the shopper has added into the shopping cart. The shopper can view the product by clicking the link of the item, add, subtract the quantity of the item and/or remove the item. Once the shopper is satisfied with they item in the cart, the shopper can click "Pay Now" which will direct the shopper to the Checkout success page.
+This page shows all the items that the shopper has added into the shopping cart. The shopper can view the product by clicking the link of the item, add, subtract the quantity of the item and/or remove the item. Once the shopper is satisfied with the item(s) in the cart, the shopper can click "Pay Now" which will direct the shopper to the Checkout success page.
 
 ### Checkout Success Page
-This page displays a message to the shopper notifying them that their order was successful and shows the order summary of what the shopper has bought and a button to go back to the Home page. This button also clear the LocalStorage.
+This page displays a message to the shopper notifying them that their order was successful, shows the order summary of what the shopper has bought, and a button to go back to the Home page. This button also clear the LocalStorage.
 
 ### Contact Page
-This page show a contact form that can validate what the shopper types in. The information that is typed in will be shown in the console.
+This page shows a contact form that can validate what the shopper types in. The information that is typed in will be shown in the console.
 
 #### Validation requirement
 1. Full name (Minimum number of characters is 3, required)
