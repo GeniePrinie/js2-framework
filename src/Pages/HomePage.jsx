@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Products } from "../Components/Common/Products";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 /**
  * HomePage component serves as the main page of The Boutique online shop.
@@ -10,7 +11,6 @@ import InputGroup from "react-bootstrap/InputGroup";
  * @returns {JSX.Element} The HomePage component.
  */
 export function HomePage() {
-  
   /**
    * `search` is a state variable that holds the user's search query.
    * It is initialized as an empty string and updated when the user types into the search input.
@@ -38,7 +38,6 @@ export function HomePage() {
         const response = await fetch(url);
         const json = await response.json();
         setProducts(json);
-
 
         // Set the document title and meta description for SEO purposes.
         document.title = "The Boutique | Home";
@@ -79,12 +78,40 @@ export function HomePage() {
           page. We hope you find what you're looking for. Good Luck!
         </p>
         <Form>
-          <InputGroup className="my-3">
-            <Form.Control
-              onChange={(event) => setSearch(event.target.value)}
-              placeholder="Type to search..."
-            />
-          </InputGroup>
+          <div
+            className="mb-4"
+            style={{
+              maxWidth: "300px",
+              height: "50px",
+              margin: "0 auto",
+              position: "relative",
+            }}
+          >
+            <InputGroup className="my-3">
+              <Form.Control
+                onChange={(event) => setSearch(event.target.value)}
+                placeholder="Type to search..."
+                className="border-primary"
+                style={{
+                  maxWidth: "300px",
+                  height: "50px",
+                  border: "2px dashed",
+                  borderRadius: "25px",
+                  paddingLeft: "35px",
+                }}
+              />
+
+              <FontAwesomeIcon
+                icon="fa-solid fa-magnifying-glass"
+                className="text-primary search-icon text-center"
+                style={{
+                  top: "15",
+                  right: "20",
+                  position: "absolute",
+                }}
+              />
+            </InputGroup>
+          </div>
         </Form>
       </div>
       <div>
