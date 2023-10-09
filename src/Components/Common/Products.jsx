@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import { DiscountSquare } from "./DiscountSquare";
 import { Price } from "./Price";
 
+/**
+ * Products component displays a list of products, each represented as a card with an image,
+ * title, description, and price. If a discount is available for a product, it shows a discount overlay.
+ * @component
+ * @param {Array} data - An array of product data objects to be displayed.
+ * @returns {JSX.Element} The Products component.
+ */
 export const Products = ({ data }) => {
   return (
     <div className="container">

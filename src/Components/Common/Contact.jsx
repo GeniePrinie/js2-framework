@@ -1,6 +1,14 @@
 import { useState } from "react";
 
+/**
+ * Contact component provides a form for users to submit inquiries or messages.
+ * It includes form fields for full name, email, subject, and message.
+ * It performs client-side form validation and handles form submission.
+ * @component
+ * @returns {JSX.Element} The Contact component.
+ */
 export const Contact = () => {
+  // Define state variables for form fields and error messages.
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -11,6 +19,7 @@ export const Contact = () => {
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
 
+  // Function to validate the form fields.
   const validateForm = () => {
     let isValid = true;
 
@@ -46,18 +55,22 @@ export const Contact = () => {
     return isValid;
   };
 
+  // Function to handle form submission.
   const onFormSubmit = (e) => {
     e.preventDefault();
 
     if (validateForm()) {
+      // Prepare form data for submission.
       const formData = {
         fullName,
         email,
         subject,
         message,
       };
+      // Log valid form data (for demonstration purposes).
       console.log("Valid submitted Form Data:", formData);
 
+      // Clear form fields
       setFullName("");
       setEmail("");
       setSubject("");

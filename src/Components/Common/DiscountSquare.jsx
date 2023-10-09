@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 
+// Styled-components for custom styling.
 const DiscountOverlay = styled.div`
   position: absolute;
   top: 0;
@@ -13,7 +14,15 @@ const DiscountOverlay = styled.div`
   border-radius: 5px;
 `;
 
+/**
+ * DiscountSquare component displays a discount overlay on product images when a discount is available.
+ * It shows the discount percentage and a flame icon to indicate a hot deal.
+ * @component
+ * @param {number} discountPercentage - The discount percentage to be displayed.
+ * @returns {JSX.Element} The DiscountSquare component.
+ */
 export const DiscountSquare = ({ discountPercentage }) => {
+  // Display the discount overlay if the discountPercentage is greater than 0.
   if (discountPercentage > 0) {
     return (
       <DiscountOverlay>
@@ -22,6 +31,7 @@ export const DiscountSquare = ({ discountPercentage }) => {
       </DiscountOverlay>
     );
   } else {
+    // If no discount, return null (no overlay).
     return null;
   }
 };

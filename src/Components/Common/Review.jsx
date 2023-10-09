@@ -1,6 +1,14 @@
 import React from "react";
 
+/**
+ * Review component displays product reviews, including their ratings, descriptions,
+ * and usernames, if available.
+ * @component
+ * @param {Object} product - The product object containing reviews property.
+ * @returns {JSX.Element} The Review component.
+ */
 export const Review = ({ product }) => {
+  // Determine the number of reviews or default to 0 if there are none.
   const numberOfReviews = product.reviews ? product.reviews.length : 0;
 
   return (

@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * Tag component displays product tags as badges.
+ * @component
+ * @param {Object} product - The product object containing tags property.
+ * @returns {JSX.Element} The Tag component.
+ */
 export const Tag = ({ product }) => {
   return (
     <p className="fs-5">

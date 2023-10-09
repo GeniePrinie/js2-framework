@@ -4,7 +4,15 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { saveToLocalStorage } from "../../Utility/localStorage";
 
+/**
+ * Cart component displays the items in the user's shopping cart.
+ * It allows users to view, update quantities, and remove items from the cart.
+ * It also provides a "Pay Now" button to proceed with the purchase.
+ * @component
+ * @returns {JSX.Element} The Cart component.
+ */
 export const Cart = () => {
+  // Use the `useCart` hook to access cart-related data and functions.
   const {
     isEmpty,
     totalItems,
