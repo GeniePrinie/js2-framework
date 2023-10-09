@@ -22,6 +22,7 @@ const DiscountOverlay = styled.div`
  * @returns {JSX.Element} The DiscountSquare component.
  */
 export const DiscountSquare = ({ discountPercentage }) => {
+  
   // Display the discount overlay if the discountPercentage is greater than 0.
   if (discountPercentage > 0) {
     return (
@@ -31,6 +32,7 @@ export const DiscountSquare = ({ discountPercentage }) => {
       </DiscountOverlay>
     );
   } else {
+
     // If no discount, return null (no overlay).
     return null;
   }

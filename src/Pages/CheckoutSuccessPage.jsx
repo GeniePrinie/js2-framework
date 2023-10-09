@@ -13,6 +13,7 @@ import {
  * @returns {JSX.Element} The CheckoutSuccessPage component.
  */
 export function CheckoutSuccessPage() {
+  
   /**
    * `productItems` is an array that stores the purchased items retrieved from local storage.
    * @type {Array} An array containing purchased product items.

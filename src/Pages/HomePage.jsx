@@ -10,6 +10,7 @@ import InputGroup from "react-bootstrap/InputGroup";
  * @returns {JSX.Element} The HomePage component.
  */
 export function HomePage() {
+  
   /**
    * `search` is a state variable that holds the user's search query.
    * It is initialized as an empty string and updated when the user types into the search input.
@@ -37,6 +38,7 @@ export function HomePage() {
         const response = await fetch(url);
         const json = await response.json();
         setProducts(json);
+
 
         // Set the document title and meta description for SEO purposes.
         document.title = "The Boutique | Home";
