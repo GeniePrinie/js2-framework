@@ -4,6 +4,7 @@ import {
   loadFromLocalStorage,
   removeFromLocalStorage,
 } from "../Utility/localStorage";
+import BackgroundImage from "../Image/bg-img.png";
 
 /**
  * CheckoutSuccessPage component serves as the confirmation page after a successful purchase.
@@ -13,7 +14,6 @@ import {
  * @returns {JSX.Element} The CheckoutSuccessPage component.
  */
 export function CheckoutSuccessPage() {
-  
   /**
    * `productItems` is an array that stores the purchased items retrieved from local storage.
    * @type {Array} An array containing purchased product items.
@@ -39,14 +39,35 @@ export function CheckoutSuccessPage() {
     }
   }, []);
 
+  const bodyStyle = {
+    backgroundImage: `url(${BackgroundImage})`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+    minHeight: "calc(100vh - 56px)",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+  };
+
   return (
-    <div className="container ">
-      <div className="text-secondary fs-1 mb-5 text-center">
-        Thank you for your purchase!
-      </div>
+    <div className="container " style={bodyStyle}>
       <div>
-        <div className="text-secondary fs-4 mb-5">Your Order Summary</div>
         <div className="container text-secondary card shadow bg-light py-5 border-0">
+          <div
+            className="text-secondary fs-1  pb-5 text-center border-secondary"
+            style={{ borderBottom: "1px dashed" }}
+          >
+            Thank you for your purchase!
+          </div>
+          <div
+            className="text-secondary fs-4 py-3 mb-3 text-start border-secondary"
+            style={{ borderBottom: "1px dashed" }}
+          >
+            Your Order Summary:
+          </div>
           {productItems &&
             productItems.map((item, index) => {
               return (
@@ -71,23 +92,26 @@ export function CheckoutSuccessPage() {
                 </div>
               );
             })}
-          <div className="d-flex justify-content-center fs-3 mt-5">
+          <div
+            className="text-center fs-3 pt-3 border-secondary"
+            style={{ borderTop: "1px dashed" }}
+          >
             Total: Kr {productTotalPrice && productTotalPrice.toFixed(2)}
           </div>
+          <Link to={`/`}>
+            <button
+              className="btn btn-primary text-light px-5 mt-5"
+              type="button"
+              onClick={() => {
+                removeFromLocalStorage("productItems");
+                removeFromLocalStorage("productTotalPrice");
+              }}
+            >
+              Back to the store
+            </button>
+          </Link>
         </div>
       </div>
-      <Link to={`/`}>
-        <button
-          className="btn btn-primary text-light px-5 mt-5"
-          type="button"
-          onClick={() => {
-            removeFromLocalStorage("productItems");
-            removeFromLocalStorage("productTotalPrice");
-          }}
-        >
-          Back to the store
-        </button>
-      </Link>
     </div>
   );
 }
