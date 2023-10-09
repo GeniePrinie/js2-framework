@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 import { Cart } from "../Components/Common/Cart";
 
+/**
+ * CheckoutPage component serves as the page for reviewing and completing a purchase.
+ * It sets the document title and meta description for SEO purposes.
+ * @component
+ * @returns {JSX.Element} The CheckoutPage component.
+ */
 export function CheckoutPage() {
   useEffect(() => {
     document.title = "The Boutique | My Cart";
