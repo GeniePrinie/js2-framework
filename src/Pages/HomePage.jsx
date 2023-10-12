@@ -63,11 +63,18 @@ export function HomePage() {
    * based on whether the product title includes the search query (case-insensitive).
    * @type {Array} An array containing filtered product data.
    */
-  let filteredProducts = products.filter((product) => {
-    return search.toLowerCase() === ""
-      ? product
-      : product.title.toLowerCase().includes(search);
-  });
+
+  const [filteredProducts, setFilteredProducts] = useState(products);
+
+  useEffect(() => {
+    const newFilteredProducts =
+      search === ""
+        ? products
+        : products.filter((product) =>
+            product.title.toLowerCase().includes(search.toLowerCase())
+          );
+    setFilteredProducts(newFilteredProducts);
+  }, [search, products]);
 
   return (
     <div>
