@@ -47,7 +47,7 @@ export const Product = ({ data }) => {
           <div className="d-flex align-items-center my-4">
             <button
               className="btn btn-primary text-light px-5 my-4"
-              onClick={() => addItem(data)}
+              onClick={() => addItem({ ...data, price: data.discountedPrice })}
             >
               Add to Cart
             </button>
