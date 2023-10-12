@@ -87,7 +87,7 @@ export function CheckoutSuccessPage() {
                     Unit price: {item.discountedPrice}
                   </div>
                   <div className="text-secondary fs-5 col">
-                    Subtotal: Kr {item.itemTotal}
+                    Subtotal: Kr {item.itemTotal.toFixed(2)}
                   </div>
                 </div>
               );

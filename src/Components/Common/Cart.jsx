@@ -27,78 +27,64 @@ export const Cart = () => {
     return <div className="text-secondary fs-4">Your Cart is empty!</div>;
   return (
     <section className="py-4 container">
-      <div className="row text-secondary">
+      <div className="row text-secondary ">
         <h1>My Cart</h1>
-        <div className="col-12">
-          <table className="table table-primary table-borderless my-5">
-            <thead>
-              <tr>
-                <th className="text-light bg-primary fs-5" scope="col">
-                  Item
-                </th>
-                <th className="bg-primary" scope="col"></th>
-                <th className="text-light bg-primary fs-5" scope="col">
-                  Unit Price
-                </th>
-                <th className="text-light bg-primary fs-5" scope="col">
-                  Quantity
-                </th>
-                <th className="text-light bg-primary fs-5" scope="col">
-                  Remove
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {items.map((item, index) => {
-                return (
-                  <tr key={index}>
-                    <td>
-                      <img
-                        src={item.imageUrl}
-                        alt={item.title}
-                        style={{ maxWidth: "100px" }}
-                      />
-                    </td>
-                    <td className="text-secondary fs-5">
-                      <Link
-                        to={`/product/${item.id}`}
-                        className="text-decoration-none text-secondary link-hover"
-                      >
-                        {item.title}
-                      </Link>
-                    </td>
-                    <td className="text-secondary fs-5">
-                      {item.discountedPrice}
-                    </td>
-                    <td className="text-secondary fs-5">
-                      <FontAwesomeIcon
-                        className="me-3 minus text-secondary"
-                        onClick={() =>
-                          updateItemQuantity(item.id, item.quantity - 1)
-                        }
-                        icon="fa-solid fa-circle-minus"
-                      />
-                      {item.quantity}
-                      <FontAwesomeIcon
-                        className="ms-3 plus text-secondary"
-                        onClick={() =>
-                          updateItemQuantity(item.id, item.quantity + 1)
-                        }
-                        icon="fa-solid fa-circle-plus"
-                      />
-                    </td>
-                    <td>
-                      <FontAwesomeIcon
-                        className="ms-3 fs-4 text-secondary trashcan"
-                        icon="fa-solid fa-trash-can"
-                        onClick={() => removeItem(item.id)}
-                      />
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+        <div>
+          <div className="text-secondary p-3">
+            {items.map((item, index) => {
+              return (
+                <div
+                  key={index}
+                  className="row mb-3 pb-2 border-secondary"
+                  style={{ borderBottom: "1px dashed" }}
+                >
+                  <div className="col p-0">
+                    <img
+                      src={item.imageUrl}
+                      alt={item.title}
+                      style={{ maxWidth: "100px" }}
+                    />
+                  </div>
+                  <div className="text-secondary fs-5 col col-sm-4 col-md-3">
+                    <Link
+                      to={`/product/${item.id}`}
+                      className="text-decoration-none text-secondary link-hover"
+                    >
+                      {item.title}
+                    </Link>
+                  </div>
+                  <div className="text-secondary fs-5 col">
+                    Unit Price: Kr {item.discountedPrice}
+                  </div>
+                  <div className="text-secondary fs-5 text-center col-8 col-md-4 col-xl">
+                    <FontAwesomeIcon
+                      className="me-3 minus text-secondary"
+                      onClick={() =>
+                        updateItemQuantity(item.id, item.quantity - 1)
+                      }
+                      icon="fa-solid fa-circle-minus"
+                    />
+                    Quantity: {item.quantity}
+                    <FontAwesomeIcon
+                      className="ms-3 plus text-secondary"
+                      onClick={() =>
+                        updateItemQuantity(item.id, item.quantity + 1)
+                      }
+                      icon="fa-solid fa-circle-plus"
+                    />
+                  </div>
+                  <div className="text-center col">
+                    <FontAwesomeIcon
+                      className="ms-3 fs-4 text-secondary trashcan"
+                      icon="fa-solid fa-trash-can"
+                      onClick={() => removeItem(item.id)}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
           <div className="mb-2 fs-4">Total Items: {totalItems}</div>
         </div>
         <div
