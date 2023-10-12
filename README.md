@@ -1,6 +1,7 @@
 # The Boutique, an eCom store by Prinyapon Prinyanut
-![Screenshot 2023-10-09 at 5 44 02 PM](https://github.com/GeniePrinie/js2-framework/assets/100139381/d9d26bfb-31b1-4dab-be41-d48221262c7d)
-![Screenshot 2023-10-09 at 5 44 59 PM](https://github.com/GeniePrinie/js2-framework/assets/100139381/8900b255-6ab1-4cb7-a05d-c203485005f3)
+![Screenshot 2023-10-12 at 1 19 16 PM](https://github.com/GeniePrinie/js2-framework/assets/100139381/cad1be37-2434-44c3-aed4-f9c7f25c2fc8)
+![Screenshot 2023-10-12 at 1 20 16 PM](https://github.com/GeniePrinie/js2-framework/assets/100139381/fc62feda-39a1-4021-b4f8-49ebdd5717b4)
+
 
 ## Description
 
